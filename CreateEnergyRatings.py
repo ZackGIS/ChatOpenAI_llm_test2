@@ -30,7 +30,7 @@ Passage:
 """
 )
 
-
+"""
 #Not certain if defining the tags as a separate class is really necessary but the llm seems to like it
 class EnergyTag(str, Enum):
     wells = "wells"
@@ -53,6 +53,7 @@ class Classification(BaseModel):
     energy: str = Field(description="What aspect of energy is this related to?")
     energy_related: int = Field(description="How related is this to energy from 1 to 10")
     tag: EnergyTag = Field(description="Classification tag")
+"""
 
 # Create the language model and agent
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, max_tokens=None, timeout=None)
