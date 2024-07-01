@@ -47,7 +47,8 @@ class EnergyTag(str, Enum):
     basemaps = "basemaps"
     bathymetry = "bathymetry"
 
-#slightly modified Classification BaseModel
+#slightly modified Classification BaseModel. this version is not using it at the moment since with_structured_output is breaking things. Because of this, output is all over the place.
+# will simplify the prompt tomorrow.
 class Classification(BaseModel):
     energy: str = Field(description="What aspect of energy is this related to?")
     energy_related: int = Field(description="How related is this to energy from 1 to 10")
